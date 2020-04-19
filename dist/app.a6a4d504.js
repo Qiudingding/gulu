@@ -12618,7 +12618,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
-//
 var _default = {
   mounted: function mounted() {
     var _iterator = _createForOfIteratorHelper(this.$el.children),
@@ -12629,7 +12628,7 @@ var _default = {
         var node = _step.value;
         var name = node.nodeName.toLowerCase();
 
-        if (name !== 'button') {
+        if (name !== "button") {
           console.warn("g-button-group \u7684\u5B50\u5143\u7D20\u5E94\u8BE5\u90FD\u662F g-button, \u4F46\u4F60\u5199\u4E86 ".concat(name));
         }
       }
