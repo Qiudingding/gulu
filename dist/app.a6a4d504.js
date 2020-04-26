@@ -12719,6 +12719,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
 var _default = {
   components: {
     Icon: _icon.default
@@ -12760,7 +12761,21 @@ exports.default = _default;
     [
       _c("input", {
         attrs: { disabled: _vm.disabled, readonly: _vm.readonly, type: "text" },
-        domProps: { value: _vm.value }
+        domProps: { value: _vm.value },
+        on: {
+          change: function($event) {
+            return _vm.$emit("change", $event)
+          },
+          input: function($event) {
+            return _vm.$emit("input", $event)
+          },
+          focus: function($event) {
+            return _vm.$emit("focus", $event)
+          },
+          blur: function($event) {
+            return _vm.$emit("blur", $event)
+          }
+        }
       }),
       _vm._v(" "),
       _vm.error
@@ -12839,7 +12854,11 @@ new _vue.default({
     loading2: false,
     loading3: true
   },
-  methods: {}
+  methods: {
+    inputChange: function inputChange(e) {
+      console.log(e);
+    }
+  }
 });
 },{"vue":"node_modules/vue/dist/vue.common.js","./button":"src/button.vue","./icon":"src/icon.vue","./button-group":"src/button-group.vue","./input":"src/input.vue"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
