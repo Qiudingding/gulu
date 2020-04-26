@@ -12,7 +12,8 @@ new Vue({
   data: {
     loading1: true,
     loading2: false,
-    loading3: true
+    loading3: true,
+    message:'hi'
   },
   methods: {
     inputChange:function(e){
